@@ -1,4 +1,4 @@
-# LSDJ MIDI SYNC Device
+# Gameboy (DMG) / LSDJ MIDI SYNC Device
 M64 STUDIO VERSION 2023: Analog Sync from MIDI SYNC IN
 
 ## Hardware setup
