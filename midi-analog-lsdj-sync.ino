@@ -72,6 +72,7 @@ void loop () {
         do_play = 0;
         PORTC &= PORTC_LED_BUILTIN_OFF;
         PORTF &= PORTF_LED_BEAT_OFF;
+        return;
     }
 
     // --  SYNC
