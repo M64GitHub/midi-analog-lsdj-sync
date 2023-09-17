@@ -52,8 +52,8 @@ void setup() {
 
     Serial1.begin(31250); // talk MIDI on RX pin
 
-    // blink to verify function
-    for(int i=0; i<4; i++) blink(200, 200);
+    // blink 4 times to verify function
+    blink(200, 200, 4);
 }
 
 void loop () {
@@ -94,13 +94,15 @@ void loop () {
     }
 }
 
-void blink(int ontime, int offtime){
-    PORTC |= PORTC_LED_BUILTIN_ON;
-    PORTF |= PORTF_LED_BEAT_ON;
-    delay(ontime);
-    PORTC &= PORTC_LED_BUILTIN_OFF;
-    PORTF &= PORTF_LED_BEAT_OFF;
-    delay(offtime);
+void blink(int ontime, int offtime, int cnt){
+    for(int i=0; i<cnt; i++) {
+        PORTC |= PORTC_LED_BUILTIN_ON;
+        PORTF |= PORTF_LED_BEAT_ON;
+        delay(ontime);
+        PORTC &= PORTC_LED_BUILTIN_OFF;
+        PORTF &= PORTF_LED_BEAT_OFF;
+        if(i != (cnt-1) ) delay(offtime);
+    }
 }
 
 void lsdj_sync() 
