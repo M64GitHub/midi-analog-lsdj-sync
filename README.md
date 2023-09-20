@@ -9,5 +9,6 @@ M64 STUDIO VERSION 2023: Analog Sync from MIDI SYNC IN
 - DMG Connection:
   - CLK signal on SI / 3 (top, middle) ( brown cable (DMG BLK) )
   - GND to GND on DMG
+  - Analog Sync Settings: 4 ticks
 - Beat LED on PF4 (A3) (pin 7)
 
